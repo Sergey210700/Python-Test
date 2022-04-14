@@ -1,9 +1,18 @@
 print("Количество билетов:")
 tickets = int(input())
-Is_free = 0
+is_free = 0
+young = 0
+older = 0
 for i in range(1,tickets+1):
     print(f"Возраст участника по {i}-му билету:")
     age_visitor = int(input())
-    if age_visitor < 18:
-        Is_free += 1
-    if 18 <= age_visitor <=
+    if 18 > age_visitor:
+        is_free += 1
+    if 18 <= age_visitor < 25:
+        young += 1
+    if 25 <= age_visitor:
+        older += 1
+if tickets > 3:
+    print("Общая стоимость:", (young * 990 + older * 1390)*0.9)
+else:
+    print("Общая стоимость:", young * 990 + older * 1390)
