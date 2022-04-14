@@ -13,6 +13,6 @@ for i in range(1,tickets+1):
     if 25 <= age_visitor:
         older += 1
 if tickets > 3:
-    print("Общая стоимость:", (young * 990 + older * 1390)*0.9)
+    print(f"Общая стоимость: {int((young * 990 + older * 1390)*0.9)}руб.")
 else:
-    print("Общая стоимость:", young * 990 + older * 1390)
+    print(f"Общая стоимость: {young * 990 + older * 1390}руб.")
